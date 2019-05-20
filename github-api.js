@@ -1,6 +1,9 @@
+var GitHub = require('github-api');
 
 //Uses the https://github.com/github-tools/github library under the hood and exposes it as `gh` property
-function GithubAPI(auth) {
+
+function GithubAPI(auth)
+{
     let repo;
     let filesToCommit = [];
     let currentBranch = {};
@@ -169,3 +172,5 @@ function GithubAPI(auth) {
         return repo.updateHead('heads/' + currentBranch.name, newCommit.sha);
     }
 }
+
+module.exports = GithubAPI;

@@ -1,7 +1,7 @@
 // @REPO https://github.com/github-tools/github
 // @EXAMPLES https://github.com/philschatz/octokat.js/tree/master/examples
 
-var GithubAPI = require('github-api');
+const GithubAPI = require('./github-api.js');
 var base64 = require('base-64');
 // import base64 from 'base-64';
 
@@ -24,18 +24,6 @@ const COMMIT_MSG = 'first commit';
 
 const HOST = config.service.github.host;
 const URL_REPO = `${HOST}/${USER}/${REPO}`;
-
-var GitHub = require('github-api');
-
-// basic auth
-var gh = new GitHub({
-    username: USER,
-    password: PASS,
-    auth: 'basic'
-    /* also acceptable:
-       token: 'MY_OAUTH_TOKEN'
-     */
-});
 
 
 // var repository = gh.setRepo(ORG, REPO);
@@ -90,18 +78,21 @@ function createFile() {
 
 // let api = new GithubAPI({token: 'API_TOKEN'});
 
+console.log(GithubAPI);
+
 let api = new GithubAPI({
     username: USER,
     password: PASS,
     auth: 'basic'
 });
+
 api.setRepo(ORG, REPO);
 api.setBranch(BRANCH_NAME)
     .then(() => api.pushFiles(
         COMMIT_MSG,
         [
             {content: 'You are a Wizard, Harry', path: 'test/harry.txt'},
-            {content: 'May the Force be with you', path: 'test2/jedi.txt'}
+            // {content: 'May the Force be with you', path: 'test2/jedi.txt'}
         ])
     )
     .then(function () {
