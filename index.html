@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!--    NO CACHE-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+    <script>
+        // REDIRECTION from http -> https
+        var dev = window.location.hostname === 'localhost';
+        var https = window.location.protocol === 'https:';
+        console.log(dev, https, window.location.protocol, window.location);
+        if (!dev && !https) {
+            window.location.href = window.location.href.replace('http', 'https');
+        }
+    </script>
+
+    <!-- App Data-->
+    <title>miniNote | editor for clouds</title>
+    <link rel="icon" type="image/png" href="http://editor.mininote.pl/mininote-logo.png" sizes="32x32"/>
+
+
+    <!-- Public-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fa581/css/all.css">
+
+<!--    <script src="js/jquery-3.4.1.min.js"></script>-->
+
+    <!-- private-->
+    <link rel="stylesheet" href="css/styles.css?ver=1.0.10">
+
+    <!--        <script src="fa581/js/all.js">-->
+
+
+    <!--    simpleMDE-->
+    <script src="js/simplemde.min.js"></script>
+    <link rel="stylesheet" href="js/simplemde.min.js">
+    <link rel="stylesheet"
+          href="https://cdn.rawgit.com/xcatliu/simplemde-theme-dark/master/dist/simplemde-theme-dark.min.css">
+
+</head>
+<body>
+
+
+<app></app>
+
+
+<script src="build.js?ver=1.0.10"></script>
+<style>
+    .menu-app,
+    .menu-account,
+    .menu-project,
+        /*.menu-note,*/
+    .menu-toolbar,
+    .menu-category {
+        display: none;
+        visibility: hidden;
+    }
+</style>
+
+
+<!--<div id="app">-->
+<!--    <sl-vue-tree v-model="nodes"/>-->
+<!--</div>-->
+
+<!--<link rel="stylesheet" href="dist/sl-vue-tree-dark.css">-->
+<!--<script src="dist/sl-vue-tree.js"></script>-->
+
+<script>
+
+//    var nodes = [
+//        {title: 'Item1', isLeaf: true},
+//        {title: 'Item2', isLeaf: true, data: { visible: false }},
+//        {title: 'Folder1'},
+//        {
+//            title: 'Folder2', isExpanded: true, children: [
+//                {title: 'Item3', isLeaf: true},
+//                {title: 'Item4', isLeaf: true}
+//            ]
+//        }
+//    ];
+//
+//    new Vue({
+//        el: '#app',
+//        components: { SlVueTree },
+//        data: function () {
+//            return {
+//                nodes: nodes
+//            }
+//        }
+//    });
+
+</script>
+
+
+
+<script>
+    // https://github.com/sparksuite/simplemde-markdown-editor
+    // https://simplemde.com/
+
+    // var simplemde = new SimpleMDE();
+    // var simplemde = new SimpleMDE({element: document.getElementById("form-control")});
+</script>
+
+</body>
+</html>

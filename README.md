@@ -50,9 +50,16 @@ https://github.com/k33g/gh3
 https://github.com/github-tools/github
 
 
-## Install
 
-    install.bat
+## How to start
+
+    a-install.bat
+    a-build.bat
+    a-run.bat
+
+http://localhost:8080/
+
+
 
 
 ## API github

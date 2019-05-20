@@ -1,0 +1,563 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,500,600);
+
+html, #app {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    max-height: 100%;
+    position: relative;
+    font-family: "Dosis", Sans-serif;
+    font-size: 26px;
+    z-index: -1;
+}
+
+
+/* lists */
+ul.unstyled {
+    list-style-type: none;
+}
+
+.unstyled li {
+}
+
+.hand {
+    cursor: pointer;
+}
+
+ul.unstyled.horizontal {
+    /*display: block;*/
+    margin: 0 5px 0 5px;
+}
+
+ul.unstyled.horizontal li {
+    /*padding-left: 1.5em;*/
+    /*text-indent: -1.5em;*/
+    display: inline-block;
+    padding: 0 5px 0 5px;
+}
+
+
+ul.unstyled.vertical li {
+    padding-left: 1.0em;
+    text-indent: -1.0em;
+}
+
+
+/* position    */
+.position-right {
+    float: right;
+}
+
+
+/* navbar  */
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    /*height: 40px;*/
+
+}
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 10;
+    min-height: 40px;
+    height: 40px;
+    margin-bottom: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links inside the navbar */
+.navbar a,
+.navbar span {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1px 8px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.navbar span:hover {
+}
+
+/* Main content */
+.main {
+    margin-top: 20px; /* Add a top margin to avoid content overlay */
+}
+
+/*NOTES*/
+
+#notes-list {
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color: #F5F5F5;
+    font-weight: 400;
+}
+
+#list-header {
+    padding: 45px 25px 25px 25px;
+}
+
+#list-header h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+#notes-list .container {
+    height: 100%;
+    /*height: calc(100% - 137px);*/
+    /*max-height: calc(100% - 137px);*/
+    overflow: auto;
+    width: 100%;
+    padding: 0;
+}
+
+#notes-list .container .list-group-item {
+    border: 0;
+    border-radius: 0;
+}
+
+.list-group-item-heading {
+    font-weight: 400;
+}
+
+#note-editor {
+    height: 100%;
+    margin-left: 620px;
+}
+
+#note-editor textarea {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    font-family: "Courier New";
+}
+
+
+/* account-list */
+
+#account-list {
+    float: left;
+    width: 60px;
+    height: 100%;
+    background-color: #30414D;
+    color: #767676;
+    padding: 5px 5px 35px 5px;
+}
+
+#account-list i {
+    font-size: 38px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+#account-list i:hover {
+    opacity: 1;
+}
+
+#account-list .position-bottom {
+    bottom: 0px;
+    position: absolute;
+    width: 60px;
+}
+
+
+/* project-list */
+
+#project-list {
+    font-size: small;
+    float: left;
+    width: 120px;
+    height: 100%;
+    background-color: #232f38;
+    color: #eee;
+    padding: 5px 0px 25px 0px;
+}
+
+#project-list i {
+    font-size: small;
+
+    /*font-size: 38px;*/
+    margin-left: 0;
+    margin-bottom: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+#project-list i:hover {
+    opacity: 1;
+}
+
+
+
+/* project-list */
+
+#category-list {
+    font-size: small;
+    float: left;
+    width: 220px;
+    height: 100%;
+    background-color: #232f38;
+    color: #eee;
+    padding: 5px 0px 25px 0px;
+}
+
+#category-list i {
+    font-size: small;
+
+    /*font-size: 38px;*/
+    margin-left: 0;
+    margin-bottom: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+#category-list i:hover {
+    opacity: 1;
+}
+
+
+/* base-tree */
+
+#base-tree {
+    font-size: small;
+    float: left;
+    width: 420px;
+    height: 100%;
+    background-color: #232f38;
+    color: #eee;
+    padding: 5px 0px 25px 0px;
+}
+
+#base-tree i {
+    font-size: small;
+
+    /*font-size: 38px;*/
+    margin-left: 0;
+    margin-bottom: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+#base-tree i:hover {
+    opacity: 1;
+}
+/* toolbar */
+
+.toolbar {
+    float: left;
+    width: 80px;
+    height: 100%;
+    background-color: #30414D;
+    color: #767676;
+    padding: 5px 25px 25px 25px;
+}
+
+.toolbar i {
+    font-size: 38px;
+    margin-bottom: 35px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+.toolbar i:hover {
+    opacity: 1;
+}
+
+.starred {
+    color: #F7AE4F;
+}
+
+
+/*MODULES*/
+#account-list > *,
+#project-list > *,
+/*#category-list > *,*/
+#notes-list > *,
+#base-tree > *,
+.container > * {
+    padding-top: 40px;
+}
+
+#note-editor {
+    padding-top: 45px;
+}
+
+
+/*    !*----- Genral Classes start ------*!*/
+/*body {*/
+/*    background: #2C303C;*/
+/*    font-family: 'Source Sans Pro', sans-serif;*/
+/*    font-size: 100%;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+/*h1 {*/
+/*    text-align: center;*/
+/*    color: #999;*/
+/*    background: rgba(0, 0, 0, 0.36);*/
+/*    margin: 0;*/
+/*    padding: 5px;*/
+/*}*/
+/*h2 {*/
+/*    text-align: center;*/
+/*    color: #999;*/
+/*    margin: 0;*/
+/*    padding: 5px;*/
+/*    font-size: 1.8em;*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+/*.wrapper,.copyright {*/
+/*    padding: 20px;*/
+/*    text-align: center;*/
+/*}*/
+/*hr{*/
+/*    margin: 30px 20px;*/
+/*    border-top:2px solid #1C1E26 ;*/
+/*    border-bottom:2px solid #38404D;*/
+/*}*/
+/*.list-unstyled {*/
+/*    padding-left: 0;*/
+/*    list-style: none;*/
+/*}*/
+/*.list-inline li {*/
+/*    display: inline-block;*/
+/*    padding-right: 5px;*/
+/*    padding-left: 5px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+/*---- Genral classes end -------*/
+
+/*Change icons size here*/
+.social-icons .fab,
+.social-icons .fas {
+    font-size: 1.8em;
+}
+
+/*Change icons circle size and color here*/
+.social-icons .fab,
+.social-icons .fas {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFF;
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons.icon-circle .fab {
+    border-radius: 50%;
+}
+
+.social-icons.icon-rounded .fab {
+    border-radius: 5px;
+}
+
+.social-icons.icon-flat .fab {
+    border-radius: 0;
+}
+
+.social-icons .fab:hover, .social-icons .fab:active {
+    color: #FFF;
+    -webkit-box-shadow: 1px 1px 3px #333;
+    -moz-box-shadow: 1px 1px 3px #333;
+    box-shadow: 1px 1px 3px #333;
+}
+
+.social-icons.icon-zoom .fab:hover, .social-icons.icon-zoom .fab:active {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.social-icons.icon-rotate .fab:hover, .social-icons.icon-rotate .fab:active {
+    -webkit-transform: scale(1.1) rotate(360deg);
+    -moz-transform: scale(1.1) rotate(360deg);
+    -ms-transform: scale(1.1) rotate(360deg);
+    -o-transform: scale(1.1) rotate(360deg);
+    transform: scale(1.1) rotate(360deg);
+}
+
+.social-icons .fab-adn {
+    background-color: #504e54;
+}
+
+.social-icons .fab-apple {
+    background-color: #aeb5c5;
+}
+
+.social-icons .fab-android {
+    background-color: #A5C63B;
+}
+
+.social-icons .fab-bitbucket, .social-icons .fab-bitbucket-square {
+    background-color: #003366;
+}
+
+.social-icons .fab-bitcoin, .social-icons .fab-btc {
+    background-color: #F7931A;
+}
+
+.social-icons .fab-css3 {
+    background-color: #1572B7;
+}
+
+.social-icons .fab-dribbble {
+    background-color: #F46899;
+}
+
+.social-icons .fab-dropbox {
+    background-color: #018BD3;
+}
+
+.social-icons .fab-facebook, .social-icons .fab-facebook-square {
+    background-color: #3C599F;
+}
+
+.social-icons .fab-flickr {
+    background-color: #FF0084;
+}
+
+.social-icons .fab-foursquare {
+    background-color: #0086BE;
+}
+
+.social-icons .fab-github, .social-icons .fab-github-alt, .social-icons .fab-github-square {
+    background-color: #070709;
+}
+
+.social-icons .fab-google-plus, .social-icons .fab-google-plus-square {
+    background-color: #CF3D2E;
+}
+
+.social-icons .fab-html5 {
+    background-color: #E54D26;
+}
+
+.social-icons .fab-instagram {
+    background-color: #A1755C;
+}
+
+.social-icons .fab-linkedin, .social-icons .fab-linkedin-square {
+    background-color: #0085AE;
+}
+
+.social-icons .fab-linux {
+    background-color: #FBC002;
+    color: #333;
+}
+
+.social-icons .fab-maxcdn {
+    background-color: #F6AE1C;
+}
+
+.social-icons .fab-pagelines {
+    background-color: #241E20;
+    color: #3984EA;
+}
+
+.social-icons .fab-pinterest, .social-icons .fab-pinterest-square {
+    background-color: #CC2127;
+}
+
+.social-icons .fab-renren {
+    background-color: #025DAC;
+}
+
+.social-icons .fab-skype {
+    background-color: #01AEF2;
+}
+
+.social-icons .fab-stack-exchange {
+    background-color: #245590;
+}
+
+.social-icons .fab-stack-overflow {
+    background-color: #FF7300;
+}
+
+.social-icons .fab-trello {
+    background-color: #265A7F;
+}
+
+.social-icons .fab-tumblr, .social-icons .fab-tumblr-square {
+    background-color: #314E6C;
+}
+
+.social-icons .fab-twitter, .social-icons .fab-twitter-square {
+    background-color: #32CCFE;
+}
+
+.social-icons .fab-vimeo-square {
+    background-color: #229ACC;
+}
+
+.social-icons .fab-vk {
+    background-color: #375474;
+}
+
+.social-icons .fab-weibo {
+    background-color: #D72B2B;
+}
+
+.social-icons .fab-windows {
+    background-color: #12B6F3;
+}
+
+.social-icons .fab-xing, .social-icons .fab-xing-square {
+    background-color: #00555C;
+}
+
+.social-icons .fab-youtube, .social-icons .fa-youtube-play, .social-icons .fa-youtube-square {
+    background-color: #C52F30;
+}
+
+ /*TEXT style*/
+
+.social-icons .fab.text-white,
+.social-icons .fas.text-white
+{
+    color: yellow;
+}
+
+.social-icons .fab.text-blue,
+.social-icons .fas.text-blue
+{
+    color: lightskyblue;
+}
+
