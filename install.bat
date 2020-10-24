@@ -1,3 +1,4 @@
+npm install
 npm install simple-git
 npm install github-api
 npm install --save octokat

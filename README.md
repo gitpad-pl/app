@@ -1,4 +1,4 @@
-# app
+# [git.plainedit.com](https://git.plainedit.com/)
 Frontend application with vue, node.js
 
 ## Zasada działania
